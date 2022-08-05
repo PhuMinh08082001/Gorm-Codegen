@@ -4,4 +4,10 @@
 ### Go Generated ###
 .DS_Store
 
-.idea/
+.idea/*
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
