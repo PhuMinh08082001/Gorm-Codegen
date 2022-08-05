@@ -3,3 +3,5 @@
 
 ### Go Generated ###
 .DS_Store
+
+.idea/
