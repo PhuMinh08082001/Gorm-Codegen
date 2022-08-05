@@ -6,6 +6,7 @@ require (
 	gorm.io/driver/postgres v1.3.8
 	gorm.io/gen v0.3.14
 	gorm.io/gorm v1.23.9-0.20220713102635-3262daf8d468
+	gorm.io/plugin/dbresolver v1.2.1
 )
 
 require (
@@ -30,5 +31,4 @@ require (
 	gorm.io/driver/mysql v1.3.2 // indirect
 	gorm.io/driver/sqlite v1.3.6 // indirect
 	gorm.io/hints v1.1.0 // indirect
-	gorm.io/plugin/dbresolver v1.2.1 // indirect
 )

@@ -1,0 +1,5 @@
+### Code gen generated
+/dal/*/*
+
+### Go Generated ###
+.DS_Store
