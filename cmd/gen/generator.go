@@ -3,6 +3,7 @@ package main
 import (
 	"gorm.io/gen"
 	"gorm/dal"
+	"gorm/dal/model"
 )
 
 func init() {
@@ -20,8 +21,10 @@ func main() {
 
 	// generate all table from database
 	//g.ApplyBasic(g.GenerateAllTable()...)
-
-	g.ApplyBasic(g.GenerateModel("users"))
+	//g.GenerateModel("users")
+	//g.GenerateModel("ordertabs")
+	//g.ApplyBasic(g.GenerateModel("users"))
+	g.ApplyBasic(model.User{}, model.Ordertab{})
 
 	g.Execute()
 }

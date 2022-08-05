@@ -3,7 +3,7 @@
 
 ### Install
 ```shell
-go get
+go build
 make gen-query-gorm
 ```
 ### Run

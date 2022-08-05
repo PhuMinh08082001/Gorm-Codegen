@@ -15,7 +15,7 @@ import (
 //	return users, err
 //}
 
-func main() {
+func main1() {
 
 	// https://github.com/go-gorm/postgres
 	db, err := gorm.Open(postgres.New(postgres.Config{
