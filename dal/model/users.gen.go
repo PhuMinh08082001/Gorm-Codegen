@@ -4,6 +4,12 @@
 
 package model
 
+import (
+	"errors"
+	"fmt"
+	"gorm.io/gorm"
+)
+
 const TableNameUser = "users"
 
 // User mapped from table <users>
@@ -16,4 +22,18 @@ type User struct {
 // TableName User's table name
 func (*User) TableName() string {
 	return TableNameUser
+}
+
+func (u *User) BeforeCreate(tx *gorm.DB) (err error) {
+
+	if u.Name == "Shit" {
+		fmt.Println("can't save invalid data")
+		err = errors.New("can't save invalid data")
+	}
+	return
+}
+
+func (u *User) AfterCreate(tx *gorm.DB) (err error) {
+	tx.Model(u).Update("name", "admin")
+	return
 }

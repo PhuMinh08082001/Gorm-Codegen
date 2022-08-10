@@ -19,12 +19,14 @@ func main() {
 
 	g.UseDB(dal.DB)
 
-	// generate all table from database
-	//g.ApplyBasic(g.GenerateAllTable()...)
-	//g.GenerateModel("users")
-	//g.GenerateModel("ordertabs")
-	//g.ApplyBasic(g.GenerateModel("users"))
-	g.ApplyBasic(model.User{}, model.Ordertab{})
+	// generate query using for db
+	g.ApplyBasic(
+		model.User{},
+		model.Ordertab{},
+		model.Category{},
+		model.OrderDetail{},
+		model.Product{},
+	)
 
 	g.Execute()
 }
